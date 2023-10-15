@@ -1,10 +1,9 @@
-import React from "react";
-import { FormInputLabel, Input, Group } from "./form-input.styles.jsx";
-function FormInput({ label, ...otherProps }) {
+import { FormInputLabel, Input, Group } from './form-input.styles';
+
+const FormInput = ({ label, ...otherProps }) => {
   return (
     <Group>
       <Input {...otherProps} />
-
       {label && (
         <FormInputLabel shrink={otherProps.value.length}>
           {label}
@@ -12,6 +11,6 @@ function FormInput({ label, ...otherProps }) {
       )}
     </Group>
   );
-}
+};
 
 export default FormInput;
